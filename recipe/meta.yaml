@@ -1,18 +1,18 @@
 {% set name = "pycld2" %}
-{% set version = "0.41" %}
+{% set version = "0.42" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycld2-{{ version }}.tar.gz
-  sha256: a42f6e974df8fdd70685c2baa8a9f523069a260e1140ce604fb9f1fb6c3064df
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycld2-{{ version }}.tar.gz
+  sha256: 5188084c97f99e896cf464057c64f6b0f91f68d111182dceb5bcfe487d7f4c0f
   patches:
     - relative_sources.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win, python_impl == 'pypy']
 
 requirements:
